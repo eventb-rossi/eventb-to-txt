@@ -9,7 +9,7 @@ setuptools.setup(
     version="1.6",
     author="Ilya Shchepetkov",
     author_email="ilya.shchepetkov@gmail.com",
-    license="LICENSE.txt",
+    license="MIT",
     description="Event-B to txt converter",
     long_description=open("README.md", encoding="utf8").read(),
     long_description_content_type="text/markdown",
