@@ -14,7 +14,7 @@ setuptools.setup(
     long_description=open("README.md", encoding="utf8").read(),
     long_description_content_type="text/markdown",
     python_requires=">=3.7",
-    url="https://github.com/17451k/eventb-to-txt",
+    url="https://github.com/eventb-rossi/eventb-to-txt",
     packages=["eventb_to_txt"],
     entry_points={
         "console_scripts": [
