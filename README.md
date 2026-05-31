@@ -1,4 +1,4 @@
-![test](https://github.com/17451k/eventb-to-txt/workflows/test/badge.svg)
+![test](https://github.com/eventb-rossi/eventb-to-txt/actions/workflows/test.yml/badge.svg)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/eventb-to-txt.svg)](https://pypi.python.org/pypi/eventb-to-txt/)
 [![PyPI version](https://badge.fury.io/py/eventb-to-txt.svg)](https://badge.fury.io/py/eventb-to-txt)
 
