@@ -11,11 +11,17 @@ import sys
 import tempfile
 import zipfile
 
+from eventb_to_txt import __version__
 from eventb_to_txt.model import Model
 
 
 def main(args=sys.argv[1:]):
     parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--version",
+        action="version",
+        version="%(prog)s {}".format(__version__),
+    )
     parser.add_argument(
         "-o",
         "--out",
