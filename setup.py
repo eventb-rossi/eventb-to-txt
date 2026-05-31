@@ -2,11 +2,22 @@
 # Use of this source code is governed by the MIT license that can be
 # found in the LICENSE file.
 
+import re
+
 import setuptools
+
+
+def read_version():
+    with open("eventb_to_txt/__init__.py", encoding="utf8") as f:
+        match = re.search(r'^__version__ = "([^"]+)"', f.read(), re.M)
+    if not match:
+        raise RuntimeError("Unable to find __version__ in eventb_to_txt/__init__.py")
+    return match.group(1)
+
 
 setuptools.setup(
     name="eventb-to-txt",
-    version="1.6",
+    version=read_version(),
     author="Ilya Shchepetkov",
     author_email="ilya.shchepetkov@gmail.com",
     license="MIT",
