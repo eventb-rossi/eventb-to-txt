@@ -19,8 +19,10 @@ Compatible with Event-B models created with Rodin 3.0 and above.
     positional arguments:
     in_path              path to the Event-B model directory or zipfile
 
-    optional arguments:
+    options:
     -h, --help           show this help message and exit
     -o PATH, --out PATH  PATH to the output directory
     -m, --merge          merge all generated txt files into a single txt file
 ```
+
+Pass `-o -` to merge all components and write the result to stdout instead of to files.
