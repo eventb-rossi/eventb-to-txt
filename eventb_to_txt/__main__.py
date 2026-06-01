@@ -11,16 +11,23 @@ import sys
 import tempfile
 import zipfile
 
-from eventb_to_txt import __version__
+from importlib.metadata import packages_distributions, version
+
 from eventb_to_txt.model import Model
 
+try:
+    import_name = __name__.split('.')[0]
+    package_name = packages_distributions()[import_name][0]
+    package_version = f"{package_name} {version(package_name)}"
+except Exception:
+    package_version = "development build"
 
 def main(args=sys.argv[1:]):
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--version",
         action="version",
-        version="%(prog)s {}".format(__version__),
+        version=package_version,
     )
     parser.add_argument(
         "-o",
