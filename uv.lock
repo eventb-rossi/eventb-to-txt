@@ -1,0 +1,8 @@
+version = 1
+revision = 3
+requires-python = ">=3.9"
+
+[[package]]
+name = "eventb-to-txt"
+version = "1.7"
+source = { editable = "." }
