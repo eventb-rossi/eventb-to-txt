@@ -1,3 +1,40 @@
 [build-system]
 requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "eventb-to-txt"
+description = "Event-B to txt converter"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Ilya Shchepetkov", email = "ilya.shchepetkov@gmail.com" },
+    { name = "Denis Efremov", email = "efremov@linux.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Unix",
+    "Operating System :: MacOS :: MacOS X",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/eventb-rossi/eventb-to-txt"
+
+[project.scripts]
+eventb-to-txt = "eventb_to_txt.__main__:main"
+
+[tool.setuptools]
+packages = ["eventb_to_txt"]
+
+[tool.setuptools.dynamic]
+version = { attr = "eventb_to_txt.__version__" }
