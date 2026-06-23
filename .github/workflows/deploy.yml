@@ -46,3 +46,16 @@ jobs:
           path: dist
 
       - uses: pypa/gh-action-pypi-publish@v1.14.0
+
+  # Tell the eventb-rossi packaging repos a new release is on PyPI, so their
+  # version-check workflows run right away instead of waiting for the daily cron.
+  # See eventb-rossi/release-automation for the reusable workflow.
+  notify-downstream:
+    needs: [upload]
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    uses: eventb-rossi/release-automation/.github/workflows/notify-downstream.yml@main
+    with:
+      tool: eventb-to-txt
+      version: ${{ github.ref_name }}
+    secrets:
+      dispatch-token: ${{ secrets.VERSION_BUMP_TOKEN }}
