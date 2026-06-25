@@ -8,8 +8,45 @@ The eventb-to-txt script simply converts Event-B machines and contexts (.bum and
 Compatible with Event-B models created with Rodin 3.0 and above.
 
 ## Installation
+
+### pip
 ```
-    $ python3 -m pip install eventb-to-txt
+    $ pip install eventb-to-txt
+```
+
+### Homebrew (macOS)
+```
+    $ brew tap eventb-rossi/tap
+    $ brew install eventb-to-txt
+```
+
+### Scoop (Windows)
+```
+    > scoop bucket add eventb https://github.com/eventb-rossi/scoop-eventb
+    > scoop install eventb/eventb-to-txt
+```
+
+### APT (Ubuntu / Debian)
+```
+    $ curl -fsSL https://eventb-rossi.github.io/apt/KEY.gpg \
+        | sudo gpg --dearmor -o /etc/apt/keyrings/eventb.gpg
+    $ . /etc/os-release
+    $ echo "deb [signed-by=/etc/apt/keyrings/eventb.gpg] https://eventb-rossi.github.io/apt ${VERSION_CODENAME} main" \
+        | sudo tee /etc/apt/sources.list.d/eventb.list
+    $ sudo apt update && sudo apt install eventb-to-txt
+```
+
+### Copr (Fedora / RHEL)
+```
+    $ sudo dnf copr enable @eventb-rossi/eventb-copr
+    $ sudo dnf install eventb-to-txt
+```
+
+### Gentoo
+```
+    $ eselect repository enable eventb-rossi
+    $ emaint sync -r eventb-rossi
+    $ emerge sci-mathematics/eventb-to-txt
 ```
 
 ## Usage
