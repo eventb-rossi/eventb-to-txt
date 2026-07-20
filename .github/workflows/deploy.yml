@@ -45,7 +45,7 @@ jobs:
           name: artifact
           path: dist
 
-      - uses: pypa/gh-action-pypi-publish@v1.14.0
+      - uses: pypa/gh-action-pypi-publish@v1.14.1
 
   # Tell the eventb-rossi packaging repos a new release is on PyPI, so their
   # version-check workflows run right away instead of waiting for the daily cron.
